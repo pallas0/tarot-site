@@ -28,6 +28,19 @@
   color: #61dafb;
 }
 
+.header {
+  margin-left: 25px;
+}
+
+
+.buttonDiv {
+  display: flex;
+  margin-top: 500px;
+  justify-content: center;
+}
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
