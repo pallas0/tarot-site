@@ -11,8 +11,8 @@ function CardSlot({singleCard}) {
           alt="tarot card"
         />
         <div className="cardText">
-          <h3>{singleCard.name}</h3>
-          {/* <h4>{singleCard.upright}</h4> */}
+          {/* <h3>{singleCard.name}</h3> */}
+          {singleCard.reversedCard ? <h3>{singleCard.name}, reversed</h3> : <h3>{singleCard.name}</h3>}
           {singleCard.reversedCard ? <h4>{singleCard.reversed}</h4> : <h4>{singleCard.upright}</h4>}
           <p>
             {singleCard.summary}
@@ -29,7 +29,6 @@ function CardSlot({singleCard}) {
 //summary
 
 //to be done:
-//add chance for card reversed, update description and summary to reflect this
 //replace filler card (upon initial load) w something blank
 //[eventually] add hover instruction on card image to click for full card description
 export default CardSlot;
