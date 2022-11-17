@@ -1,8 +1,11 @@
 import './App.css';
 import UserLogin from './UserLogin';
 import SingleCard from './SingleCard';
+import CardSlot from './CardSlot';
 
 function App() {
+
+  const randomCard = "http://localhost:3000/api/v1/spreads/random_card";
 
   // fetch("https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=10")
   // .then(function (response) {
@@ -16,13 +19,9 @@ function App() {
   //   // handle what went wrong
   // });
 
-  // fetch("https://localhost:3000/api/v1")
-  //   .then(response => {
-  //     console.log(response.json());
-  //   })
-  //   .catch(error => {
-  //     throw new Error("something went wrong")
-  //   })
+  //randomCard, {mode: "no-cors"}
+
+  
 
   return (
    <div>
