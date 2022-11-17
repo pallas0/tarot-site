@@ -24,11 +24,12 @@ function App() {
   
 
   return (
-   <div>
+   <div className='wholePage'>
     <h1 className="header">Tarot Reading~</h1>
     <div className="cardSlots"><CardSlot singleCard={singleCard}/></div>
     <div className="buttonDiv">
     <button className='cardButton' onClick={handleClick}>Single Card</button>
+    <button>Past, Present, and Future</button>
     </div>
     </div>
   );

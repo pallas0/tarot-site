@@ -36,11 +36,12 @@
 .buttonDiv {
   display: flex;
   margin-top: 50px;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .cardSlots {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
