@@ -35,9 +35,16 @@
 
 .buttonDiv {
   display: flex;
-  margin-top: 500px;
+  margin-top: 50px;
   justify-content: center;
 }
+
+.cardSlots {
+  display: flex;
+  justify-content: center;
+}
+
+
 
 
 

@@ -25,6 +25,7 @@ function App() {
   return (
    <div>
     <h1 className="header">Tarot Reading~</h1>
+    <div className="cardSlots"><CardSlot/></div>
     <div className="buttonDiv">
     <button className='cardButton' onClick={handleClick}>Single Card</button>
     </div>
