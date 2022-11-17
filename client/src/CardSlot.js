@@ -2,7 +2,7 @@ import React from 'react'
 
 function CardSlot({singleCard}) {
     
-    console.log(singleCard)
+    //console.log(singleCard)
     return (
       <div>
         <img

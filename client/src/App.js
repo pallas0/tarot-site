@@ -11,7 +11,9 @@ function App() {
     fetch(randomCard).then((r) => {
         if (r.ok) {
           r.json().then((card) => {
-            setSingleCard(card[0])
+            let reversedBool = Math.random() < 0.5;
+            let fullCard = {...card[0], reversed: reversedBool}
+            setSingleCard(fullCard)
           });
         }
         else {
