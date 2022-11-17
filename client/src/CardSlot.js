@@ -2,7 +2,8 @@ import React from 'react'
 
 function CardSlot({singleCard}) {
     
-    //console.log(singleCard)
+    console.log(singleCard)
+
     return (
       <div>
         <img
@@ -11,7 +12,8 @@ function CardSlot({singleCard}) {
         />
         <div className="cardText">
           <h3>{singleCard.name}</h3>
-          <h4>{singleCard.upright}</h4>
+          {/* <h4>{singleCard.upright}</h4> */}
+          {singleCard.reversedCard ? <h4>{singleCard.reversed}</h4> : <h4>{singleCard.upright}</h4>}
           <p>
             {singleCard.summary}
           </p>

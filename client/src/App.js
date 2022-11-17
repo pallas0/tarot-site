@@ -12,7 +12,7 @@ function App() {
         if (r.ok) {
           r.json().then((card) => {
             let reversedBool = Math.random() < 0.5;
-            let fullCard = {...card[0], reversed: reversedBool}
+            let fullCard = {...card[0], reversedCard: reversedBool}
             setSingleCard(fullCard)
           });
         }
