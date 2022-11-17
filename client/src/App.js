@@ -5,13 +5,12 @@ import React, {useEffect, useState} from 'react'
 function App() {
 
   const randomCard = "http://localhost:3000/api/v1/spreads/random_card";
-  const [singleCard, setSingleCard] = useState(null);
+  const [singleCard, setSingleCard] = useState("https://tarot-api.s3.amazonaws.com/images/major/5.jpg");
 
   function handleClick() {
     fetch(randomCard).then((r) => {
         if (r.ok) {
           r.json().then((card) => {
-            console.log(card[0])
             setSingleCard(card[0])
           });
         }
@@ -25,7 +24,7 @@ function App() {
   return (
    <div>
     <h1 className="header">Tarot Reading~</h1>
-    <div className="cardSlots"><CardSlot/></div>
+    <div className="cardSlots"><CardSlot singleCard={singleCard}/></div>
     <div className="buttonDiv">
     <button className='cardButton' onClick={handleClick}>Single Card</button>
     </div>
