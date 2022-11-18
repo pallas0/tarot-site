@@ -7,16 +7,14 @@ function App() {
   const randomCard = "http://localhost:3000/api/v1/spreads/random_card";
   const [singleCard, setSingleCard] = useState("https://tarot-api.s3.amazonaws.com/images/major/5.jpg");
   const [singleDisplay, setSingleDisplay] = useState(true);
+  const [card1, setCard1] = useState("");
+  const [card2, setCard2] = useState("");
+  const [card3, setCard3] = useState("");
 
   function getCard() {
     fetch(randomCard).then((r) => {
       if (r.ok) {
         r.json()
-      //   .then((card) => {
-      //     let reversedBool = Math.random() < 0.5;
-      //     let fullCard = {...card[0], reversedCard: reversedBool}
-      //     console.log(fullCard)
-      //   });
       }
       else {
         throw new Error("haha nope")
@@ -27,7 +25,7 @@ function App() {
   function parseCard(cardObj) {
     let reversedBool = Math.random() < 0.5;
     let fullCard = {...cardObj[0], reversedCard: reversedBool}
-    console.log(fullCard)
+    return fullCard;
   }
 
   function handleSingleClick() {
@@ -49,7 +47,7 @@ function App() {
   function handlePPFClick() {
     setSingleDisplay(false);
     getCard().then((card) => {
-      parseCard(card);
+      console.log(parseCard(card));
     })
 
   }
