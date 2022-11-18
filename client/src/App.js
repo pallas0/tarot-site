@@ -8,28 +8,26 @@ function App() {
   const [singleCard, setSingleCard] = useState("https://tarot-api.s3.amazonaws.com/images/major/5.jpg");
   const [singleDisplay, setSingleDisplay] = useState(true);
 
-  function dealCard() {
-
-    let fullCard;
+  function getCard() {
     fetch(randomCard).then((r) => {
       if (r.ok) {
-        r.json().then((card) => {
-          let reversedBool = Math.random() < 0.5;
-          fullCard = {...card[0], reversedCard: reversedBool}
-          console.log(fullCard)
-        });
+        r.json()
+      //   .then((card) => {
+      //     let reversedBool = Math.random() < 0.5;
+      //     let fullCard = {...card[0], reversedCard: reversedBool}
+      //     console.log(fullCard)
+      //   });
       }
       else {
         throw new Error("haha nope")
       }
     })
+  }
 
-    return fullCard;
-    //ok this doesn't work for a reason I strongly suspect has something to do w fetch calls being async
-    //... should probably figure out wtf that means and handle it accordingly
-    //possible workaround - store intended return value in a state function
-    //[would like to understand wtf's happening though] -- I mean it's either an async thing or a scope thing
-    //[hmmmmmm]
+  function parseCard(cardObj) {
+    let reversedBool = Math.random() < 0.5;
+    let fullCard = {...cardObj[0], reversedCard: reversedBool}
+    console.log(fullCard)
   }
 
   function handleSingleClick() {
@@ -50,8 +48,10 @@ function App() {
 
   function handlePPFClick() {
     setSingleDisplay(false);
-    let test = dealCard();
-    console.log(test);
+    getCard().then((card) => {
+      parseCard(card);
+    })
+
   }
   
 
