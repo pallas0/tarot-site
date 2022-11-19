@@ -1,6 +1,7 @@
 import './App.css';
 import CardSlot from './CardSlot';
 import React, {useEffect, useState} from 'react'
+import ThreeCardSpread from './ThreeCardSpread';
 
 function App() {
 
@@ -59,8 +60,12 @@ function App() {
    <div className='wholePage'>
     <h1 className="header">Tarot Reading~</h1>
     <div className="cardSlots">
-      {singleDisplay ? <CardSlot singleCard={singleCard}/> : 
-      null}
+      {/* {singleDisplay ? <CardSlot singleCard={singleCard}/> : 
+      null} */}
+      {/* {threeCards.map((card) => {
+        <CardSlot singleCard={card}/>
+      })} */}
+      {!singleDisplay && threeCards ? <ThreeCardSpread cards={threeCards}/> : null}
       </div>
     <div className="buttonDiv">
     <button className='cardButton' onClick={handleSingleClick}>Single Card</button>
@@ -72,12 +77,4 @@ function App() {
 
 export default App;
 
-//ok let's pseudocode this shit --
-//if 'single card' is pressed ...
-//actually, fuck it -- let's stick a ternary in the cardSlots div that returns whether
-//it's a singleCard draw or multiCard draw (cool cool cool)
-
-
-//motherfucking DRY principle --- ok rather than having a fuck ton of fetch calls, let's
-//rewrite that function so each handleClick can call it and get a card set
 
