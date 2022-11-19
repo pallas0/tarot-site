@@ -12,9 +12,9 @@ function App() {
   const [card3, setCard3] = useState("");
 
   function getCard() {
-    fetch(randomCard).then((r) => {
+    return fetch(randomCard).then((r) => {
       if (r.ok) {
-        r.json()
+        return r.json();
       }
       else {
         throw new Error("haha nope")
@@ -46,8 +46,9 @@ function App() {
 
   function handlePPFClick() {
     setSingleDisplay(false);
-    getCard().then((card) => {
-      console.log(parseCard(card));
+    getCard()
+    .then((r) => {
+      console.log(parseCard(r))
     })
 
   }
