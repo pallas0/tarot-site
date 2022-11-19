@@ -13,9 +13,9 @@ function CardSlot({singleCard}) {
         <div className="cardText">
           {singleCard.reversedCard ? <h3>{singleCard.name}, reversed</h3> : <h3>{singleCard.name}</h3>}
           {singleCard.reversedCard ? <h4>{singleCard.reversed}</h4> : <h4>{singleCard.upright}</h4>}
-          <p>
+          {singleCard.reversedCard ? null : <p>
             {singleCard.summary}
-          </p>
+          </p>}
         </div>
       </div>
     );
