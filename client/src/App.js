@@ -5,14 +5,13 @@ import React, {useEffect, useState} from 'react'
 function App() {
 
   const randomCard = "http://localhost:3000/api/v1/spreads/random_card";
+  const threeRandomCards = "http://localhost:3000/api/v1/spreads/three_cards"
   const [singleCard, setSingleCard] = useState("https://tarot-api.s3.amazonaws.com/images/major/5.jpg");
   const [singleDisplay, setSingleDisplay] = useState(true);
-  const [card1, setCard1] = useState("");
-  const [card2, setCard2] = useState("");
-  const [card3, setCard3] = useState("");
+  const [threeCards, setThreeCards] = useState([])
 
-  function getCard() {
-    return fetch(randomCard).then((r) => {
+  function getCard(link) {
+    return fetch(link).then((r) => {
       if (r.ok) {
         return r.json();
       }
@@ -22,7 +21,7 @@ function App() {
     })
   }
 
-  function parseCard(cardObj) {
+  function parseSingleCard(cardObj) {
     let reversedBool = Math.random() < 0.5;
     let fullCard = {...cardObj[0], reversedCard: reversedBool}
     return fullCard;
@@ -46,11 +45,13 @@ function App() {
 
   function handlePPFClick() {
     setSingleDisplay(false);
-    getCard()
+    getCard(threeRandomCards)
     .then((r) => {
-      console.log(parseCard(r))
+      //console.log(r)
+      setThreeCards(r)
     })
 
+    console.log(threeCards)
   }
   
 
@@ -60,7 +61,6 @@ function App() {
     <div className="cardSlots">
       {singleDisplay ? <CardSlot singleCard={singleCard}/> : 
       null}
-      {/* <CardSlot singleCard={singleCard}/> */}
       </div>
     <div className="buttonDiv">
     <button className='cardButton' onClick={handleSingleClick}>Single Card</button>
