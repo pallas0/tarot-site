@@ -9,7 +9,7 @@ function App() {
   const threeRandomCards = "http://localhost:3000/api/v1/spreads/three_cards"
   const [singleCard, setSingleCard] = useState("https://tarot-api.s3.amazonaws.com/images/major/5.jpg");
   const [singleDisplay, setSingleDisplay] = useState(true);
-  const [threeCards, setThreeCards] = useState([])
+  const [threeCards, setThreeCards] = useState(["https://tarot-api.s3.amazonaws.com/images/major/5.jpg", "https://tarot-api.s3.amazonaws.com/images/major/5.jpg", "https://tarot-api.s3.amazonaws.com/images/major/5.jpg"])
 
   function getCard(link) {
     return fetch(link).then((r) => {

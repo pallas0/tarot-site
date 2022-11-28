@@ -4,7 +4,9 @@ import CardSlot from "./CardSlot";
 function ThreeCardSpread({cards}) {
     return (
         <div>
-            hi
+            <CardSlot singleCard={cards[0]}/>
+            <CardSlot singleCard={cards[1]}/>
+            <CardSlot singleCard={cards[2]}/>
         </div>
     )
 }
