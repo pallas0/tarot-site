@@ -1,5 +1,5 @@
 {
-  "name": "phase-4-deploying-app-demo",
+  "name": "static",
   "description": "Build scripts for Heroku",
   "engines": {
     "node": "16.x"
@@ -9,5 +9,20 @@
     "clean": "rm -rf public",
     "deploy": "cp -a client/build/. public/",
     "heroku-postbuild": "npm run clean && npm run build && npm run deploy"
-  }
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pallas0/tarot-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pallas0/tarot-site/issues"
+  },
+  "homepage": "https://github.com/pallas0/tarot-site#readme"
 }
