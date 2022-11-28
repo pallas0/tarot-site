@@ -7,7 +7,7 @@ function App() {
 
   const randomCard = "http://localhost:3000/api/v1/spreads/random_card";
   const threeRandomCards = "http://localhost:3000/api/v1/spreads/three_cards"
-  const [singleCard, setSingleCard] = useState("https://tarot-api.s3.amazonaws.com/images/major/5.jpg");
+  const [singleCard, setSingleCard] = useState();
   const [singleDisplay, setSingleDisplay] = useState(true);
   const [threeCards, setThreeCards] = useState(["https://tarot-api.s3.amazonaws.com/images/major/5.jpg", "https://tarot-api.s3.amazonaws.com/images/major/5.jpg", "https://tarot-api.s3.amazonaws.com/images/major/5.jpg"])
 
@@ -65,7 +65,8 @@ function App() {
       {/* {threeCards.map((card) => {
         <CardSlot singleCard={card}/>
       })} */}
-      {!singleDisplay && threeCards ? <ThreeCardSpread cards={threeCards}/> : null}
+      {!singleDisplay && threeCards ? <ThreeCardSpread cards={threeCards}/> : singleDisplay && singleCard ? <CardSlot singleCard={singleCard}/> : 
+      <h3>Press a button to get your reading</h3>}
       </div>
     <div className="buttonDiv">
     <button className='cardButton' onClick={handleSingleClick}>Single Card</button>
