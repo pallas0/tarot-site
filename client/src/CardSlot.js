@@ -5,7 +5,7 @@ function CardSlot({singleCard}) {
     console.log(singleCard)
 
     return (
-      <div>
+      <div className='individualCard'>
         <img
           src={singleCard.image}
           alt="tarot card"

@@ -60,11 +60,6 @@ function App() {
    <div className='wholePage'>
     <h1 className="header">Tarot Reading~</h1>
     <div className="cardSlots">
-      {/* {singleDisplay ? <CardSlot singleCard={singleCard}/> : 
-      null} */}
-      {/* {threeCards.map((card) => {
-        <CardSlot singleCard={card}/>
-      })} */}
       {!singleDisplay && threeCards ? <ThreeCardSpread cards={threeCards}/> : singleDisplay && singleCard ? <CardSlot singleCard={singleCard}/> : 
       <h3>Press a button to get your reading</h3>}
       </div>

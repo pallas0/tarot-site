@@ -45,6 +45,10 @@
   justify-content: center;
 }
 
+.individualCard {
+  flex: 1;
+}
+
 
 
 
