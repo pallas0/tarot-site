@@ -9,9 +9,8 @@
 }
 
 .buttonDiv {
-  /* display: flex;
-  margin-top: 50px;
-  justify-content: space-around; */
+  display: flex;
+  justify-content: space-around; 
   
 }
 .cardButton {
@@ -28,11 +27,13 @@
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
+
+  &:hover {
+    box-shadow: inset 400px 100px;
+  }
 }
 
-.cardButton:hover {
-  box-shadow: inset 400px 100px 400px 100px;
-}
+
 
 .cardSlots {
   display: flex;

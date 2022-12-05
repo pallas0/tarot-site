@@ -67,7 +67,7 @@ function App() {
       </div>
     <div className="buttonDiv">
     <button className='cardButton' onClick={handleSingleClick}>Single Card</button>
-    <button onClick={handlePPFClick}>Past, Present, and Future</button>
+    <button className='cardButton' onClick={handlePPFClick}>Past, Present, and Future</button>
     </div>
     </div>
   );
