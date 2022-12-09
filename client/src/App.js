@@ -5,8 +5,8 @@ import ThreeCardSpread from './ThreeCardSpread';
 
 function App() {
 
-  const randomCard = "https://tarot-api.herokuapp.com/api/v1/spreads/random_card";
-  const threeRandomCards = "https://tarot-api.herokuapp.com/api/v1/spreads/three_cards"
+  const randomCard = "http://localhost:3000/api/v1/spreads/random_card";
+  const threeRandomCards = "http://localhost:3000/api/v1/spreads/three_cards"
   const [singleCard, setSingleCard] = useState();
   const [singleDisplay, setSingleDisplay] = useState(true);
   const [threeCards, setThreeCards] = useState(["https://tarot-api.s3.amazonaws.com/images/major/5.jpg", "https://tarot-api.s3.amazonaws.com/images/major/5.jpg", "https://tarot-api.s3.amazonaws.com/images/major/5.jpg"])
