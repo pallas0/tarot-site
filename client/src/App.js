@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import CardSlot from './CardSlot';
 import React, {useEffect, useState} from 'react'
 import ThreeCardSpread from './ThreeCardSpread';
@@ -59,14 +59,16 @@ function App() {
   return (
    <div className='wholePage'>
     <h1 className="header">Tarot Reading~</h1>
-    <div className="cardSlots">
-      {!singleDisplay && threeCards ? <ThreeCardSpread cards={threeCards}/> : singleDisplay && singleCard ? <CardSlot singleCard={singleCard}/> : 
-      <h3>Press a button to get your reading</h3>}
-      </div>
+      <div className="cardSlots">
+        {!singleDisplay && threeCards ? <ThreeCardSpread cards={threeCards}/> : singleDisplay && singleCard ? <CardSlot singleCard={singleCard}/> : 
+        <h3>Press a button to get your reading</h3>}
+        </div>
     <div className="buttonDiv">
-    <button className='cardButton' onClick={handleSingleClick}>Single Card</button>
-    <button onClick={handlePPFClick}>Past, Present, and Future</button>
-    </div>
+      <button className='cardButton1' onClick={handleSingleClick}>Single Card</button>
+      <button className='cardButton2' onClick={handlePPFClick}>Past, Present, and Future</button>
+
+      
+      </div>
     </div>
   );
 }
