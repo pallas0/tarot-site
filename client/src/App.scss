@@ -9,22 +9,17 @@
   text-align: center;
 }
 
-.wholePage{
-  justify-content: center;
-  text-align: center;
-}
+// .wholePage{
+//   justify-content: center;
+//   text-align: center;
+// }
 .ctaHeading {
   position: relative;
   text-align: center;
 }
-.buttonDiv {
-  display: flex;
-  justify-content: space-around; 
-  position: relative;
-}
 
 .cardSlots {
-  // text-align: center;
+  text-align: center;
   display: flex;
   height: 300px;
   width: 300px;
@@ -34,8 +29,30 @@
 }
 .cardText {
   justify-content: right;
+  text-align: left;
+  margin: 30px;
+  height: auto;
+  width:  400px;
+  
+}
+.buttonDiv {
+  display: flex;
+  justify-content: space-around; 
+  position: relative;
 }
 
+
+.individualCard {
+  display: flex;
+  justify-content: right;
+  flex: 1;
+  border: #FDFFFF;
+  border-color: #FDFFFF;
+  border-width:10px;
+  margin-left: 300px;
+  margin-bottom: 30px;
+  text-align: center;
+}
 .cardButton1 {
   color: #EDC1D4;
   border: 4px solid #EDC1D4;
@@ -90,17 +107,7 @@
   border: 4px solid #EDC1D4;
   padding: 15px;
   position: relative;
-  justify-content: left;
-}
-
-.individualCard {
-  display: flex;
-  flex: 1;
-  border: #FDFFFF;
-  border-color: #FDFFFF;
-  border-width:10px;
-  margin: 30px;
-  text-align: center;
+  // justify-content: left;
 }
 
 
