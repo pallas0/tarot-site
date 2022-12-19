@@ -61,7 +61,7 @@ function App() {
     <h1 className="header">Tarot Reading~</h1>
       <div className="cardSlots">
         {!singleDisplay && threeCards ? <ThreeCardSpread cards={threeCards}/> : singleDisplay && singleCard ? <CardSlot singleCard={singleCard}/> : 
-        <h3>Press a button to get your reading</h3>}
+        <h3 className='ctaHeading'>Press a button to get your reading</h3>}
         </div>
     <div className="buttonDiv">
       <button className='cardButton1' onClick={handleSingleClick}>Single Card</button>

@@ -6,6 +6,7 @@
 .header {
   margin-left: 25px;
   position: relative;
+  text-align: center;
 }
 
 .buttonDiv {
@@ -13,6 +14,20 @@
   justify-content: space-around; 
   position: relative;
 }
+
+.cardSlots {
+  display: absolute;
+  height: 300px;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  
+}
+
+// .ctaHeading {
+//   text-align: center;
+// }
 .cardButton1 {
   color: #EDC1D4;
   border: 4px solid #EDC1D4;
@@ -34,7 +49,7 @@
 }
 
 .cardButton2 {
-  position: fixed;
+  // position: fixed;
   // left: 30px;
   // top: 80px;
   // right: 0;
@@ -62,12 +77,6 @@
 
 
 
-.cardSlots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: fit-content;
-}
 
 .cardImageArea {
   border: 4px solid #EDC1D4;
