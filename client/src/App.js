@@ -57,8 +57,9 @@ function App() {
   
 
   return (
-   <div className='wholePage'>
+    <div>
     <h1 className="header">Tarot Reading~</h1>
+   <div className='wholePage'>
       <div className="cardSlots">
         {!singleDisplay && threeCards ? <ThreeCardSpread cards={threeCards}/> : singleDisplay && singleCard ? <CardSlot singleCard={singleCard}/> : 
         <h3 className='ctaHeading'>Press a button to get your reading</h3>}
@@ -69,6 +70,7 @@ function App() {
 
       
       </div>
+    </div>
     </div>
   );
 }
