@@ -144,11 +144,13 @@ $almost-white: #FEFFFF;
 
 
 @keyframes card-load {
-  0% {
-    transform: translateX(-%100);
+  from {
+    margin-left: 100%;
+    width: 300%;
   }
-  100% {
-    transform: translateX(0);
+  to {
+    margin-left: 0%;
+    width: 100%;
 
   }
 }
