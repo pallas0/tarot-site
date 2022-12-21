@@ -1,3 +1,12 @@
+$dark-purple: #671CD2;
+$soft-pink: #EFCEE2;
+$soft-blue: #A1D9D1;
+$red: #E43545;
+$dark-red: #AD1433;
+$almost-white: #FEFFFF;
+
+
+
 * {
   background-color: #6920D8;
   color: #FDFFFF;
@@ -26,6 +35,7 @@
   align-items: center;
   // justify-content: center;
   height: fit-content;
+  
 }
 .cardText {
   justify-content: right;
@@ -33,6 +43,7 @@
   margin: 30px;
   height: auto;
   width:  400px;
+  // border: 
   
 }
 .buttonDiv {

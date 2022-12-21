@@ -1,0 +1,93 @@
+* {
+  background-color: #6920D8;
+  color: #FDFFFF;
+}
+
+.header {
+  margin-left: 25px;
+  position: relative;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.cardButton1 {
+  color: #EDC1D4;
+  border: 4px solid #EDC1D4;
+  border-radius: 0px;
+  padding: 18px 36px;
+  display: inline-block;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #EDC1D4;
+  transition: ease-out 0.4s;
+}
+.cardButton1:hover {
+  box-shadow: inset 400px 100px;
+}
+
+.cardButton2 {
+  position: fixed;
+  color: #EDC1D4;
+  border: 4px solid #EDC1D4;
+  border-radius: 0px;
+  padding: 18px 36px;
+  display: inline-block;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #EDC1D4;
+  transition: ease-out 0.4s;
+}
+.cardButton2:hover {
+  box-shadow: inset 400px 100px;
+  font-display: #6920D8;
+}
+
+.cardSlots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.cardImageArea {
+  border: 4px solid #EDC1D4;
+  padding: 15px;
+  position: relative;
+}
+
+.individualCard {
+  flex: 1;
+  border: #FDFFFF;
+  border-color: #FDFFFF;
+  border-width: 10px;
+  margin: 30px;
+  text-align: center;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=App.css.map */
