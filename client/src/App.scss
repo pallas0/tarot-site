@@ -8,7 +8,7 @@ $almost-white: #FEFFFF;
 
 
 * {
-  background-color: #6920D8;
+  background-color: $dark-red;
   color: #FDFFFF;
 }
 
@@ -24,7 +24,14 @@ $almost-white: #FEFFFF;
 // }
 .ctaHeading {
   position: relative;
+  width: 400px;
+  // display: flex;
   text-align: center;
+  // margin-left: 700px;
+  margin-left: 160%;
+  // margin-right: 45px;
+  box-sizing: border-box;
+ 
 }
 
 .cardSlots {
