@@ -65,8 +65,8 @@ function App() {
         <p className='ctaHeading'>Press a button to get your reading</p></span>}
         </div>
     <div className="buttonDiv">
-      <button className='cardButton1' onClick={handleSingleClick}>Single Card</button>
-      <button className='cardButton2' onClick={handlePPFClick}>Past, Present, and Future</button>
+      <button className='cardButton' onClick={handleSingleClick}>Single Card</button>
+      <button className='cardButton' onClick={handlePPFClick}>Past, Present, and Future</button>
 
       
       </div>

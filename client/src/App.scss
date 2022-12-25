@@ -70,9 +70,9 @@ $almost-white: #FEFFFF;
   margin-left: 300px;
   margin-bottom: 30px;
   text-align: center;
-  animation: card-load 300ms ease-in;
+  animation: card-load 2s ease-in;
 }
-.cardButton1 {
+.cardButton {
   color: #EDC1D4;
   border: 4px solid #EDC1D4;
   border-radius: 0px;
@@ -90,32 +90,7 @@ $almost-white: #FEFFFF;
   &:hover {
     box-shadow: inset 400px 100px;
   }
-}
 
-.cardButton2 {
-  // position: fixed;
-  // left: 30px;
-  // top: 80px;
-  // right: 0;
-  color: #EDC1D4;
-  
-  border: 4px solid #EDC1D4;
-  border-radius: 0px;
-  padding: 18px 36px;
-  display: inline-block;
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: 14px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  box-shadow: inset 0 0 0 0 #EDC1D4;
-  -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  transition: ease-out 0.4s;
-
-  &:hover {
-    box-shadow: inset 400px 100px;
-    font-display: #6920D8;
-  }
 }
 
 
@@ -133,15 +108,6 @@ $almost-white: #FEFFFF;
 
 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 
 @keyframes card-load {
   from {
@@ -149,7 +115,7 @@ $almost-white: #FEFFFF;
     width: 300%;
   }
   to {
-    margin-left: 0%;
+    margin-left: 10%;
     width: 100%;
 
   }
