@@ -13,9 +13,8 @@ $almost-white: #FEFFFF;
 }
 
 .header {
-  margin-left: 25px;
-  position: relative;
-  text-align: center;
+
+
 }
 
 // .wholePage{
@@ -98,7 +97,7 @@ $almost-white: #FEFFFF;
 
 
   &:active {
-    animation: button-slide 1s ease-in;
+    animation: button-slide 2s ease-in;
   }
 }
 

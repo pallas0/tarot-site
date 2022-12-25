@@ -1,4 +1,5 @@
 import './App.scss';
+import tarotLogo from './titleimg/tarot title 2.svg'
 import CardSlot from './CardSlot';
 import React, {useEffect, useState} from 'react'
 import ThreeCardSpread from './ThreeCardSpread';
@@ -58,7 +59,7 @@ function App() {
 
   return (
     <div>
-    <h1 className="header">Tarot Reading~</h1>
+    <img src={tarotLogo} alt='title'> </img>
    <div className='wholePage'>
       <div className="cardSlots">
         {!singleDisplay && threeCards ? <ThreeCardSpread cards={threeCards}/> : singleDisplay && singleCard ? <CardSlot singleCard={singleCard}/> : <span>
@@ -67,11 +68,11 @@ function App() {
     <div className="buttonDiv">
       <button className='cardButton' onClick={handleSingleClick}>Single Card</button>
       <button className='cardButton' onClick={handlePPFClick}>Past, Present, and Future</button>
-
-      
+    </div>
       </div>
-    </div>
-    </div>
+      </div>
+
+ 
   );
 }
 
