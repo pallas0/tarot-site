@@ -40,17 +40,22 @@ $almost-white: #FEFFFF;
   height: 300px;
   width: 300px;
   align-items: center;
-  // justify-content: center;
   height: fit-content;
   
 }
+
+// .cardTextContainer {
+//   background-color: $soft-pink ;
+//   opacity: 30%;
+// }
+
 .cardText {
   justify-content: right;
   text-align: left;
   margin: 30px;
   height: auto;
   width:  400px;
-  // border: 
+
   
 }
 .buttonDiv {
@@ -91,6 +96,10 @@ $almost-white: #FEFFFF;
     box-shadow: inset 400px 100px;
   }
 
+
+  &:active {
+    animation: button-slide 1s ease-in;
+  }
 }
 
 
@@ -118,5 +127,14 @@ $almost-white: #FEFFFF;
     margin-left: 10%;
     width: 100%;
 
+  }
+}
+
+@keyframes button-slide {
+  from {
+    transform: translateX(0) ;
+  }
+  to {
+    transform: translateX(100);
   }
 }

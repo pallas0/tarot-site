@@ -12,12 +12,14 @@ function CardSlot({singleCard}) {
           alt="tarot card"
           className='cardImageArea'
         />
+        <div className='cardTextContainer'>
          <div className="cardText">
           {singleCard.reversedCard ? <h3>{singleCard.name}, reversed</h3> : <h3>{singleCard.name}</h3>}
           {singleCard.reversedCard ? <h4>{singleCard.reversed}</h4> : <h4>{singleCard.upright}</h4>}
           {singleCard.reversedCard ? null : <p>
             {singleCard.summary}
           </p>}
+          </div>
         </div>
         </div>
       </div>
